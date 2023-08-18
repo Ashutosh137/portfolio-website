@@ -11,48 +11,51 @@
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
   <style>
-    section{
+    section {
       background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(189, 189, 89, 1) 58%, rgba(253, 187, 45, 1) 100%);
       margin-bottom: 100px;
 
     }
-    section:hover{ 
+
+    section:hover {
       background: #efaaaa;
       transform: scale(1.1);
       transform-origin: top;
       z-index: 2;
       border-radius: 20px;
-    transition: all 200ms linear;
-  }
-  body{
-    background-color:azure;
-  }
-  section li:hover{
-    transform: scale(1.1);
-    border-radius: 20px;
-    z-index: 2;
-    transition: all 200ms linear;
-    background-color:sandybrown;
-  }
-footer{
-  margin-top: 200px;
-}
+      transition: all 200ms linear;
+    }
 
-nav li:active{
-  border-bottom: 3px solid black;
-}
+    body {
+      background-color: azure;
+    }
 
-nav a img:active{
-  transform: scale(2);
-  position: absolute;
-  transition: all 300ms ease-in ;
-  transform-origin: left;
-  z-index: 10;
-  left: 40vw;
-  top: 40vh;
-  width: 100%;
-}
+    section li:hover {
+      transform: scale(1.1);
+      border-radius: 20px;
+      z-index: 2;
+      transition: all 200ms linear;
+      background-color: sandybrown;
+    }
 
+    footer {
+      margin-top: 200px;
+    }
+
+    nav li:active {
+      border-bottom: 3px solid black;
+    }
+
+    nav a img:active {
+      transform: scale(2);
+      position: absolute;
+      transition: all 300ms ease-in;
+      transform-origin: left;
+      z-index: 10;
+      left: 40vw;
+      top: 40vh;
+      width: 100%;
+    }
   </style>
 
 
@@ -61,19 +64,21 @@ nav a img:active{
 <body>
   <nav class="navbar text-capitalize navbar-expand-lg navbar-light text-white">
     <a class="navbar-brand" href="#">
-      <img src="https://media.licdn.com/dms/image/D4D03AQFOvsxACI7qMQ/profile-displayphoto-shrink_800_800/0/1685852134846?e=1692230400&v=beta&t=3HQaDqEl8UE2QAV3rN0gMosyOaXK0GlYNJxrcdLkYSI"
-        alt="Avatar Logo" style="width:100px;" class="rounded-pill m-2">
+      <img
+        src="https://media.licdn.com/dms/image/D4D03AQFOvsxACI7qMQ/profile-displayphoto-shrink_400_400/0/1685852134846?e=1697673600&v=beta&t=I0NrPjzEH9PFJghC7kcr1ZHeNKc3y1hPhlHfDjH0lME"
+        alt="" style="width:100px;" class="rounded-pill m-2">
     </a>
     <a class="navbar-brand m-auto h1 border border-2 rounded-pill p-2 border-danger " href="#">ashutosh sharma </a>
     <button class="btn btn-secondary m-3 rounded-pill" download="">Resume</button>
-    <button class="navbar-toggler m-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler m-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto h5  mb-2 mb-lg-0">
         <li class="nav-item m-auto">
-          <a class="nav-link active " aria-current="page" href="#">Home</a>
+          <a class="nav-link active " aria-current="page">Home</a>
         </li>
         <li class="nav-item m-auto">
           <a class="nav-link active" href="#about">About</a>
@@ -84,29 +89,27 @@ nav a img:active{
         <li class="nav-item m-auto ">
           <a class="nav-link active" href="#contect">contact me</a>
         </li>
-        
+
     </div>
   </nav>
 
 
 
 
-  <section class="container h-100 my-5 text-capitalize card" id="home">
-
+  <section class="container h-100 mt-4 text-capitalize card" id="home">
     <div class="d-flex flex-wrap justify-content-center my-auto mx-3">
-
       <div class="my-5 w-50">
-        <div class="p-sm-5 ">
-          <img src="https://media.licdn.com/dms/image/D4D03AQFOvsxACI7qMQ/profile-displayphoto-shrink_800_800/0/1685852134846?e=1692230400&v=beta&t=3HQaDqEl8UE2QAV3rN0gMosyOaXK0GlYNJxrcdLkYSI"
+          <img
+            src="https://media.licdn.com/dms/image/D4D03AQFOvsxACI7qMQ/profile-displayphoto-shrink_400_400/0/1685852134846?e=1697673600&v=beta&t=I0NrPjzEH9PFJghC7kcr1ZHeNKc3y1hPhlHfDjH0lME"
             alt="logo" class="rounded-pill w-75 img-fluid">
-        </div>
       </div>
 
       <div class="m-auto" style="width: 300px;">
         <h3 class="text-success">Hello , i am</h3>
         <h1 class="text-danger">ashutosh sharma </h1>
-        <label class="h5">a web developer</label>
-        <p>Unlocking the Essence of Your Story through Captivating Design. Experience the Artistry of a Tailored Portfolio</p>
+        <label class="h5">a full stack developer</label>
+        <p>Unlocking the Essence of Your Story through Captivating Design. Experience the Artistry of a Tailored
+          Portfolio</p>
         <button class="btn btn-danger rounded">More...</button>
       </div>
 
@@ -114,29 +117,28 @@ nav a img:active{
 
   </section>
   <section class="container text-capitalize h-100 card" id="about">
-
     <div class="d-flex flex-wrap my-auto mx-3">
+      <div class="my-5 w-50 m-auto">
+        <img
+          src="https://media.licdn.com/dms/image/D4D03AQFOvsxACI7qMQ/profile-displayphoto-shrink_400_400/0/1685852134846?e=1697673600&v=beta&t=I0NrPjzEH9PFJghC7kcr1ZHeNKc3y1hPhlHfDjH0lME"
+          alt="logo" class="rounded-pill w-75 img-fluid">
+      </div>
       <div class="my-4 m-auto" style="width: 300px;">
         <h3 class="text-success">my intro</h3>
         <h1 class="border-bottom border-dark border-2 text-danger py-2">about me</h1>
         <p>hi i am ashutosh sharma , i am from rajsamand rajasathan india ,i had done my schooling from jawahar navodaya
           vidhyayala rajsamand . i am pursing btech from collage of tecnology and engineering udaipur (Raj)</p>
-        <button class="btn btn-danger"><a class="text-decoration-none text-white" href="#contect">About me...</a></button>
-      </div>
-      
-      <div class="my-5 w-50">
-        <div class="p-sm-5 ">
-          <img src="https://media.licdn.com/dms/image/D4D03AQFOvsxACI7qMQ/profile-displayphoto-shrink_800_800/0/1685852134846?e=1692230400&v=beta&t=3HQaDqEl8UE2QAV3rN0gMosyOaXK0GlYNJxrcdLkYSI"
-            alt="logo" class="rounded-pill w-75 img-fluid">
-        </div>
+        <button class="btn btn-danger"><a class="text-decoration-none text-white" href="#contect">About
+            me...</a></button>
       </div>
     </div>
   </section>
 
   <section class="container my-5 rounded  text-center text-capitalize" id="project">
-    <div class="d-flex ">
+    <div class="d-flex">
       <h1 class="m-4 border-bottom border-dark border-3 p-2">my projects</h1>
-      <button class="m-auto rounded-pill"><a href="https://github.com/Ashutosh137/" ><i class="bi bi-github"></i></a></i></button>
+      <button class="m-auto rounded-pill"><a href="https://github.com/Ashutosh137/"><i
+            class="bi bi-github"></i></a></i></button>
     </div>
 
     <ul class="d-flex container m-auto py-5 border border-2 border-danger rounded p-0 mb-3 flex-wrap">
@@ -146,7 +148,7 @@ nav a img:active{
           <label class="text-secondary border border-1 my-2 p-1  border-success p-1 ">react.js,tailwind css </label>
           <p class="card-text">get more information on github account, "click more"</p>
           <a class="btn btn-primary" href="https://github.com/Ashutosh137/Hospital">more</a>
-          <a class="btn btn-danger" href="https://github.com/Ashutosh137/Hospital">deployed link</a>
+          <a class="btn btn-danger" href="https://hospital-webapp-dqnz.onrender.com/">deployed link</a>
         </div>
 
       </li>
@@ -162,11 +164,12 @@ nav a img:active{
       </li>
       <li class="card shadow m-auto my-2 py-3 ">
         <div class="card-body">
-          <h4 class="card-title border rounded-pill border-danger border-3 p-2">chatgpt clone</h4>
-          <label class="text-secondary border border-1 my-2 p-1  border-success p-1 ">react.js openai api, bootstrap </label>
+          <h4 class="card-title border rounded-pill border-danger border-3 p-2">Ai chatbot</h4>
+          <label class="text-secondary border border-1 my-2 p-1  border-success p-1 ">react.js openai api, bootstrap
+          </label>
           <p class="card-text">get more information on github account, "click more"</p>
           <a class="btn btn-primary" href="https://github.com/Ashutosh137/chatgpt">more</a>
-          <a class="btn btn-danger" href="3">deployed link</a>
+          <a class="btn btn-danger" href="https://chat-gpt-clone-yoxn.onrender.com/">deployed link</a>
         </div>
 
 
@@ -174,17 +177,19 @@ nav a img:active{
       <li class="card shadow m-auto my-2 py-3">
         <div class="card-body ">
           <h4 class="card-title border rounded-pill border-danger border-3 p-2">gym trainer webapp</h4>
-          <label class="text-secondary border border-1 my-2 p-1  border-success p-1 ">react.js,bootstrap ,rapid api </label>
+          <label class="text-secondary border border-1 my-2 p-1  border-success p-1 ">react.js,bootstrap ,rapid api
+          </label>
           <p class="card-text">get more information on github account, "click more"</p>
           <a class="btn btn-primary" href="https://github.com/Ashutosh137/react-nodemodule">more</a>
-          <a class="btn btn-danger" href="#">deployed link</a>
+          <a class="btn btn-danger" href="https://gym-trainer-6khk.onrender.com/">deployed link</a>
 
 
         </div>
       </li>
       <li class="card shadow my-2 m-auto py-3">
         <div class="card-body ">
-          <h4 class="card-title border rounded-pill border-danger border-3 p-2 m-auto">gui calculator and notepad using python</h4>
+          <h4 class="card-title border rounded-pill border-danger border-3 p-2 m-auto">gui calculator and notepad using
+            python</h4>
           <label class="text-secondary border border-1 my-2 p-1  border-success p-1">python,tkinter module </label>
           <p class="card-text">get more information on github account, "click more"</p>
           <a class="btn btn-primary"
@@ -198,9 +203,11 @@ nav a img:active{
   <footer class="text-white footer rounded bg-dark text-capitalize pb-4" id="contect">
     <h3 class="border-bottom m-2 p-3">contact me</h3>
     <div class="d-flex flex-wrap m-5 text-decoration-none text-center">
-      <label class="m-auto p-2 border-bottom">+91-7877997488</label>
-      <a class="m-auto p-2 text-white border-bottom text-decoration-none " href="mailto:mr.luckysharma7@gmail.com">mr.luckysharma7@gmail.com</a>
-      <a class="m-auto p-2 text-white border-bottom text-decoration-none " href="https://github.com/Ashutosh137/">github</a>
+      <a class="m-auto p-2 text-white border-bottom text-decoration-none" href="tel">+91-7877997488</a>
+      <a class="m-auto p-2 text-white border-bottom text-decoration-none "
+        href="mailto:mr.luckysharma7@gmail.com">mr.luckysharma7@gmail.com</a>
+      <a class="m-auto p-2 text-white border-bottom text-decoration-none "
+        href="https://github.com/Ashutosh137/">github</a>
       <a class="m-auto p-2 border-bottom text-white text-decoration-none "
         href="https://www.linkedin.com/in/ashutosh-sharma-5b99b0226">linkdin</a>
       <a class="m-auto p-2 text-white border-bottom text-decoration-none "
@@ -211,7 +218,7 @@ nav a img:active{
         href="https://www.codechef.com/users/ashu_77">codechef</a>
       <a class="m-auto p-2 text-white border-bottom text-decoration-none"
         href="https://www.hackerrank.com/mrluckysharma7">hackerrank</a>
-      <a class="m-auto p-2 text-white border-bottom text-decoration-none " href="">leetcode</a>
+      <a class="m-auto p-2 text-white border-bottom text-decoration-none " href="https://leetcode.com/mrluckysharma7/">leetcode</a>
     </div>
     <div class="text-center  p-2">Copyright © 2023 All rights reserved | This template is made by ashutosh sharma
     </div>
