@@ -16,13 +16,13 @@
     }
 
     section {
-      background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(189, 189, 89, 1) 58%, rgba(253, 187, 45, 1) 100%);
+      background: linear-gradient(0deg, rgb(138, 190, 190) 0%, rgb(233, 233, 127) 58%, rgb(194, 169, 113) 100%);
       margin-bottom: 100px;
       border-radius: 20px;
     }
 
     section:hover {
-      background: #efaaaa;
+      background: wheat;
       transform: scale(1.1);
       transform-origin: top;
       z-index: 2;
@@ -46,8 +46,16 @@
       background-color: sandybrown;
     }
 
+    footer a:hover {
+      transform: scale(1.4);
+      transition: all ease 0.5s;
+      background: black;
+      z-index: 12;
+    }
+
     section li:not(:hover),
-    section:not(:hover) {
+    section:not(:hover),
+    footer a:not(:hover) {
       transform: scale(1);
       transition: all 0.3s ease-in-out;
     }
@@ -60,15 +68,29 @@
       border-bottom: 3px solid black;
     }
 
-    nav a img:active {
-      transform: scale(5);
+    .logo:active {
       position: absolute;
-      transition: all 300ms ease-in;
+      transform: scale(5);
       transform-origin: left;
+      transition: all 300ms ease-in;
       z-index: 10;
-      left: 0%;
-      top: 50vh;
-      width: 100vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 20vw;
+      height: 20vw;
+      backdrop-filter: blur(20px);
+      top: 40vh;
+    }
+
+    section img {
+      clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+    }
+
+    .logo img {
+      outline: 3px solid rgb(90, 90, 33);
+      padding: 3px;
+
     }
   </style>
 
@@ -77,13 +99,11 @@
 
 <body>
   <nav class="navbar text-capitalize navbar-expand-lg navbar-light text-white">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand logo " href="#">
       <img
-        src="https://media.licdn.com/dms/image/D4D03AQFOvsxACI7qMQ/profile-displayphoto-shrink_400_400/0/1685852134846?e=1697673600&v=beta&t=I0NrPjzEH9PFJghC7kcr1ZHeNKc3y1hPhlHfDjH0lME"
-        alt="" style="width:100px;" class="rounded-pill m-2">
+        src="https://media.licdn.com/dms/image/D4D03AQFOvsxACI7qMQ/profile-displayphoto-shrink_800_800/0/1685852134846?e=1704326400&v=beta&t=PWj9S6m293I5YeE3fpNo557fpj9mXg7pvTOw_qYVUug"
+        alt="" style="width:100px;" class="rounded-pill shadow-sm m-2">
     </a>
-    <a class="navbar-brand m-auto h1 border border-2 rounded-pill p-2 border-danger " href="#">ashutosh sharma </a>
-    <button class="btn btn-secondary m-3 rounded-pill" download="">Resume</button>
     <button class="navbar-toggler m-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -110,59 +130,58 @@
 
 
 
-  <section class="container h-100 mt-4 text-capitalize card" id="home">
+  <section class="container p-3 h-100 mt-4 text-capitalize card" id="home">
     <div class="d-flex flex-wrap justify-content-center my-auto mx-3">
-      <div class="my-5 w-50">
-        <img
-          src="https://media.licdn.com/dms/image/D4D03AQFOvsxACI7qMQ/profile-displayphoto-shrink_400_400/0/1685852134846?e=1697673600&v=beta&t=I0NrPjzEH9PFJghC7kcr1ZHeNKc3y1hPhlHfDjH0lME"
-          alt="logo" class="rounded-pill w-75 img-fluid">
+      <div class="my-5 d-flex w-50">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqdJedhWADzEbG7AJN30oAXsTEAcMiBheC0A&usqp=CAU"
+          alt="logo" class="rounded-pill m-auto w-75 shadow img-fluid">
       </div>
 
-      <div class="m-auto" style="width: 300px;">
+      <div class="m-auto shadow p-5  rounded" style="max-width: 500px;">
         <h3 class="text-success">Hello , i am</h3>
         <h1 class="text-danger">ashutosh sharma </h1>
         <label class="h5">a full stack developer</label>
         <p>Unlocking the Essence of Your Story through Captivating Design. Experience the Artistry of a Tailored
           Portfolio</p>
-        <button class="btn btn-danger rounded"><a class="text-decoration-none text-white fw-semibold " href="#contect">let's connect...</a></button>
+        <button class="btn btn-danger rounded"><a class="text-decoration-none text-white fw-semibold "
+            href="#contect">Let's Connect...</a></button>
       </div>
 
     </div>
 
   </section>
-  <section class="container text-capitalize h-100 card" id="about">
-    <div class="d-flex flex-wrap my-auto mx-3">
-      <div class="my-5 w-50 m-auto">
-        <img
-          src="https://media.licdn.com/dms/image/D4D03AQFOvsxACI7qMQ/profile-displayphoto-shrink_400_400/0/1685852134846?e=1697673600&v=beta&t=I0NrPjzEH9PFJghC7kcr1ZHeNKc3y1hPhlHfDjH0lME"
-          alt="logo" class="rounded-pill w-75 img-fluid">
+  <section class="container py-3 text-capitalize h-100 card" id="about">
+    <div class="d-flex flex-wrap justify-content-center my-auto mx-3">
+      <div class="my-5 w-50 d-flex ">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcyUTDEfSe7QR52moHIBD40ww5ebW7LyUCSw&usqp=CAU"
+          alt="logo" class="rounded-pill m-auto w-75 shadow img-fluid">
       </div>
-      <div class="my-4 m-auto" style="width: 300px;">
+      <div class=" m-auto shadow p-5" style="max-width: 500px;">
         <h3 class="text-success">my intro</h3>
         <h1 class="border-bottom border-dark border-2 text-danger py-2">about me</h1>
-        <p>hi i am ashutosh sharma , i am from rajsamand rajasathan india ,i had done my schooling from jawahar navodaya
-          vidhyayala rajsamand . i am pursing btech from collage of tecnology and engineering udaipur (Raj)</p>
+        <p>hi , i am <b>ashutosh sharma </b>from rajsamand rajasathan . i am pursing btech from <b>collage of tecnology
+            and
+            engineering udaipur (Raj)</b> in <b>artificial intelligence and data science engineering</b> </p>
         <button class="btn btn-danger"><a class="text-decoration-none text-white" href="#contect">About
             me...</a></button>
       </div>
     </div>
   </section>
 
-  <section class="container my-5 rounded  text-center text-capitalize" id="project">
+  <section class="container p-1 my-5 rounded  text-center text-capitalize" id="project">
     <div class="d-flex ">
-      <h1 class="my-4 border-bottom border-dark border-3 p-2">my projects</h1>
+      <h1 class="my-4 border-bottom border-dark border-3 mr-auto p-2">my projects</h1>
       <button class=" rounded-pill m-auto"><a href="https://github.com/Ashutosh137/"><i
             class="bi bi-github text-dark h4"></i></a></i></button>
     </div>
-
-    <ul class="d-flex container m-auto py-5 border border-2 border-danger rounded p-0 mb-3 flex-wrap">
+    <ul class="d-flex container m-auto py-5 rounded p-0 mb-3 flex-wrap">
       <li class="shadow card m-auto my-2 py-3">
         <div class="card-body">
           <h4 class="card-title border rounded-pill border-danger border-3 p-2">hospital website</h4>
           <label class="text-secondary border border-1 my-2 p-1  border-success p-1 ">react.js,tailwind css </label>
           <p class="card-text">get more information on github account, "click more"</p>
           <a class="btn btn-primary" href="https://github.com/Ashutosh137/Hospital">more</a>
-          <a class="btn btn-danger" href="https://hospital-webapp-dqnz.onrender.com/">deployed link</a>
+          <a class="btn btn-danger" href="https://vercel.com/ashutosh137/aichatbot/3CLpbgFdix5GBDv2hLfPHGwxoxZf">deployed link</a>
         </div>
 
       </li>
@@ -250,7 +269,7 @@
       <a class="m-auto p-2 text-white border-bottom text-decoration-none "
         href="https://leetcode.com/mrluckysharma7/">leetcode</a>
     </div>
-    <div class="text-center  p-2">Copyright © 2023 All rights reserved | This template is made by ashutosh sharma
+    <div class="text-center  p-2">Copyright © 2023 All rights reserved || This template is made by ashutosh sharma
     </div>
 
   </footer>
