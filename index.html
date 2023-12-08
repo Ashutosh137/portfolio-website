@@ -15,25 +15,33 @@
       display: none;
     }
 
+    body {
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      background: linear-gradient(20%, rgb(206, 23, 23), rgb(174, 29, 29), rgb(99, 31, 155)) no-repeat center center/cover;
+    }
+
     section {
-      background: linear-gradient(0deg, rgb(138, 190, 190) 0%, rgb(233, 233, 127) 58%, rgb(194, 169, 113) 100%);
-      margin-bottom: 100px;
-      border-radius: 20px;
+      margin: 2rem;
+      background: linear-gradient(0deg, rgb(7, 230, 230) 0%, rgb(219, 219, 25) 58%, rgb(232, 205, 147) 100%);
+      margin-bottom: 5rem;
+      border-radius: 5rem;
     }
 
     section:hover {
-      background: wheat;
-      transform: scale(1.1);
+      transform: rotate(-0.4deg);
       transform-origin: top;
       z-index: 2;
       padding-left: 10px;
       padding-right: 10px;
       border-radius: 20px;
-      transition: all 200ms linear;
+      transition: all 200ms ease-in;
     }
 
-    body {
-      background-color: azure;
+    section li {
+      max-width: 600px;
+      width: max-content;
+      padding: 20px;
+      overflow: hidden;
     }
 
     section li:hover {
@@ -42,20 +50,23 @@
       z-index: 2;
       padding-left: 10px;
       padding-right: 10px;
-      transition: all 200ms linear;
-      background-color: sandybrown;
+      transition: all 200ms ease-in-out;
+      background-color: rgb(230, 189, 154, 0.2);
     }
 
-    footer a:hover {
-      transform: scale(1.4);
+    footer a:hover,
+    nav li:hover {
+      transform: scale(1.1);
       transition: all ease 0.5s;
-      background: black;
       z-index: 12;
+      margin-left: 10px;
+      margin-right: 10px;
     }
 
     section li:not(:hover),
     section:not(:hover),
-    footer a:not(:hover) {
+    footer a:not(:hover),
+    nav li:not(:hover) {
       transform: scale(1);
       transition: all 0.3s ease-in-out;
     }
@@ -99,7 +110,7 @@
 
 <body>
   <nav class="navbar text-capitalize navbar-expand-lg navbar-light text-white">
-    <a class="navbar-brand logo " href="#">
+    <a class="navbar-brand logo mx-5 " href="#">
       <img
         src="https://media.licdn.com/dms/image/D4D03AQFOvsxACI7qMQ/profile-displayphoto-shrink_800_800/0/1685852134846?e=1704326400&v=beta&t=PWj9S6m293I5YeE3fpNo557fpj9mXg7pvTOw_qYVUug"
         alt="" style="width:100px;" class="rounded-pill shadow-sm m-2">
@@ -110,7 +121,7 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto h5  mb-2 mb-lg-0">
+      <ul class="navbar-nav m-auto h5  mb-2 mb-lg-0">
         <li class="nav-item m-auto">
           <a class="nav-link active " aria-current="page">Home</a>
         </li>
@@ -130,14 +141,15 @@
 
 
 
-  <section class="container p-3 h-100 mt-4 text-capitalize card" id="home">
+  <section class="p-3 h-100 mt-4 text-capitalize card" id="home">
     <div class="d-flex flex-wrap justify-content-center my-auto mx-3">
       <div class="my-5 d-flex w-50">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqdJedhWADzEbG7AJN30oAXsTEAcMiBheC0A&usqp=CAU"
-          alt="logo" class="rounded-pill m-auto w-75 shadow img-fluid">
+        <img
+          src="https://png.pngtree.com/png-clipart/20231020/original/pngtree-avatar-of-a-brunette-man-png-image_13379742.png"
+          alt="logo" class=" m-auto w-75 img-fluid">
       </div>
 
-      <div class="m-auto shadow p-5  rounded" style="max-width: 500px;">
+      <div class="m-auto shadow p-5 rounded" style="max-width: 500px;">
         <h3 class="text-success">Hello , i am</h3>
         <h1 class="text-danger">ashutosh sharma </h1>
         <label class="h5">a full stack developer</label>
@@ -150,11 +162,12 @@
     </div>
 
   </section>
-  <section class="container py-3 text-capitalize h-100 card" id="about">
+  <section class=" py-3 text-capitalize h-100 card" id="about">
     <div class="d-flex flex-wrap justify-content-center my-auto mx-3">
       <div class="my-5 w-50 d-flex ">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcyUTDEfSe7QR52moHIBD40ww5ebW7LyUCSw&usqp=CAU"
-          alt="logo" class="rounded-pill m-auto w-75 shadow img-fluid">
+        <img
+          src="https://png.pngtree.com/png-clipart/20231020/original/pngtree-avatar-of-a-brunette-man-png-image_13379741.png"
+          alt="logo" class=" m-auto w-50 img-fluid">
       </div>
       <div class=" m-auto shadow p-5" style="max-width: 500px;">
         <h3 class="text-success">my intro</h3>
@@ -168,40 +181,40 @@
     </div>
   </section>
 
-  <section class="container p-1 my-5 rounded  text-center text-capitalize" id="project">
+  <section class=" p-1 my-5 rounded  text-center text-capitalize" id="project">
     <div class="d-flex ">
-      <h1 class="my-4 border-bottom border-dark border-3 mr-auto p-2">my projects</h1>
+      <h1 class="my-4 border-bottom border-dark border-3 mr-auto rounded m-5 p-2">my projects</h1>
       <button class=" rounded-pill m-auto"><a href="https://github.com/Ashutosh137/"><i
             class="bi bi-github text-dark h4"></i></a></i></button>
     </div>
     <ul class="d-flex container m-auto py-5 rounded p-0 mb-3 flex-wrap">
       <li class="shadow card m-auto my-2 py-3">
         <div class="card-body">
-          <h4 class="card-title border rounded-pill border-danger border-3 p-2">hospital website</h4>
+          <h4 class="card-title border rounded-pill border-danger border-3 p-2">Mirrormed hospital website</h4>
           <label class="text-secondary border border-1 my-2 p-1  border-success p-1 ">react.js,tailwind css </label>
-          <p class="card-text">get more information on github account, "click more"</p>
-          <a class="btn btn-primary" href="https://github.com/Ashutosh137/Hospital">more</a>
-          <a class="btn btn-danger" href="https://vercel.com/ashutosh137/aichatbot/3CLpbgFdix5GBDv2hLfPHGwxoxZf">deployed link</a>
+          <p class="card-text">"Mirrormed: React-powered hospital webapp; departments, gallery, appointments, and
+            contact integration."
+
+
+
+
+
+          </p>
+          <a class="btn btn-primary" href="https://github.com/Ashutosh137/Hospital">code</a>
+          <a class="btn btn-danger"
+            href="https://vercel.com/ashutosh137/aichatbot/3CLpbgFdix5GBDv2hLfPHGwxoxZf">deployed link</a>
         </div>
 
       </li>
       <li class="card shadow m-auto my-2 py-3 ">
         <div class="card-body">
-          <h4 class="card-title border rounded-pill border-danger border-3 p-2">portfollio website</h4>
-          <label class="text-secondary border border-1 my-2 p-1  border-success p-1 ">html css bootstrap</label>
-          <p class="card-text">get more information on github account, "click more"</p>
-          <a class="btn btn-primary" href="https://github.com/Ashutosh137/portfolio-website">more</a>
-          <a class="btn btn-danger" href="https://ashutosh137.github.io/portfolio-website/">deployed link</a>
-
-        </div>
-      </li>
-      <li class="card shadow m-auto my-2 py-3 ">
-        <div class="card-body">
-          <h4 class="card-title border rounded-pill border-danger border-3 p-2">Ai chatbot</h4>
+          <h4 class="card-title border rounded-pill border-danger border-3 p-2">TalkForge : An Ai chatbot</h4>
           <label class="text-secondary border border-1 my-2 p-1  border-success p-1 ">react.js openai api, bootstrap
           </label>
-          <p class="card-text">get more information on github account, "click more"</p>
-          <a class="btn btn-primary" href="https://github.com/Ashutosh137/chatgpt">more</a>
+          <p class="card-text">
+            "TalkForge: AI chatbot clone with OpenAI GPT-3.5 Turbo. Two characters – teacher for direct answers, and
+            friend for interactive conversations."</p>
+          <a class="btn btn-primary" href="https://github.com/Ashutosh137/chatgpt">code</a>
           <a class="btn btn-danger" href="https://chat-gpt-clone-yoxn.onrender.com/">deployed link</a>
         </div>
 
@@ -210,11 +223,15 @@
 
       <li class="card shadow m-auto my-2 py-3">
         <div class="card-body ">
-          <h4 class="card-title border rounded-pill border-danger border-3 p-2">gym trainer webapp</h4>
+          <h4 class="card-title border rounded-pill border-danger border-3 p-2">Unleashed Fitness : An exercise webapp
+          </h4>
           <label class="text-secondary border border-1 my-2 p-1  border-success p-1 ">react.js,bootstrap ,rapid api
           </label>
-          <p class="card-text">get more information on github account, "click more"</p>
-          <a class="btn btn-primary" href="https://github.com/Ashutosh137/react-nodemodule">more</a>
+          <p class="card-text">"Unleashed Fitness: Comprehensive exercise webapp with 1300+ categorized workouts,
+            detailed filters, and video/gif demonstrations for home and gym. Save your favorites locally for long-term
+            access."
+          </p>
+          <a class="btn btn-primary" href="https://github.com/Ashutosh137/react-nodemodule">code</a>
           <a class="btn btn-danger" href="https://gym-trainer-ashutosh137.vercel.app/">deployed link</a>
 
 
@@ -223,11 +240,13 @@
 
       <li class="card shadow m-auto my-2 py-3">
         <div class="card-body ">
-          <h4 class="card-title border rounded-pill border-danger border-3 p-2"> language translator</h4>
+          <h4 class="card-title border rounded-pill border-danger border-3 p-2">TranslateHub : A language translator
+          </h4>
           <label class="text-secondary border border-1 my-2 p-1  border-success p-1 ">html ,bootstrap, google translator
           </label>
-          <p class="card-text">get more information on github account, "click more"</p>
-          <a class="btn btn-primary" href="https://github.com/Ashutosh137/language-translator">more</a>
+          <p class="card-text">TranslateHub: A language translator website with text-to-text translation across multiple
+            languages."</p>
+          <a class="btn btn-primary" href="https://github.com/Ashutosh137/language-translator">code</a>
           <a class="btn btn-danger" href=" https://ashutosh137.github.io/language-translator/">deployed link</a>
 
 
@@ -236,12 +255,12 @@
 
       <li class="card shadow my-2 m-auto py-3">
         <div class="card-body ">
-          <h4 class="card-title border rounded-pill border-danger border-3 p-2 m-auto">gui calculator and notepad using
+          <h4 class="card-title border rounded-pill border-danger border-3 p-2 m-auto">gui interface using
             python</h4>
           <label class="text-secondary border border-1 my-2 p-1  border-success p-1">python,tkinter module </label>
-          <p class="card-text">get more information on github account, "click more"</p>
+          <p class="card-text">Python GUI with Tkinter: Todo List, Calculator, and Notepad applications</p>
           <a class="btn btn-primary"
-            href="https://github.com/Ashutosh137/GUI-interface-using-python-thinker-module">more</a>
+            href="https://github.com/Ashutosh137/GUI-interface-using-python-thinker-module">code</a>
 
       </li>
 
