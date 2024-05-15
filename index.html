@@ -1,5 +1,4 @@
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,6 +15,7 @@
     }
 
     body {
+      background-color: rgb(246, 238, 227);
       font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
       background: linear-gradient(20%, rgb(206, 23, 23), rgb(174, 29, 29), rgb(99, 31, 155)) no-repeat center center/cover;
     }
@@ -103,7 +103,8 @@
       padding: 3px;
 
     }
-    @media (max-width: '750px'){
+
+    @media (max-width: '750px') {
       section {
         margin: 0.1rem;
       }
@@ -115,9 +116,9 @@
 
 <body>
   <nav class="navbar text-capitalize navbar-expand-lg navbar-light text-white">
-    <a class="navbar-brand logo mx-5 " href="#">
+    <a class="navbar-brand logo  " href="#">
       <img
-        src="https://media.licdn.com/dms/image/D4D03AQFOvsxACI7qMQ/profile-displayphoto-shrink_800_800/0/1685852134846?e=1704326400&v=beta&t=PWj9S6m293I5YeE3fpNo557fpj9mXg7pvTOw_qYVUug"
+        src="profile.jpg"
         alt="" style="width:100px;" class="rounded-pill shadow-sm m-2">
     </a>
     <button class="navbar-toggler m-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -125,7 +126,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse g-3" id="navbarSupportedContent">
       <ul class="navbar-nav m-auto h5  mb-2 mb-lg-0">
         <li class="nav-item m-auto">
           <a class="nav-link active " aria-current="page">Home</a>
@@ -189,24 +190,38 @@
   <section class=" p-1 my-5 rounded  text-center text-capitalize" id="project">
     <div class="d-flex ">
       <h1 class="my-4 border-bottom border-dark border-3 mr-auto rounded m-5 p-2">my projects</h1>
-      <button class=" rounded-pill m-auto"><a href="https://github.com/Ashutosh137/"><i
+      <button class=" rounded-pill m-auto"><a target="_blank" href="https://github.com/Ashutosh137/"><i
             class="bi bi-github text-dark h4"></i></a></i></button>
     </div>
     <ul class="d-flex container m-auto py-5 rounded p-0 mb-3 flex-wrap">
       <li class="card shadow m-auto my-2 py-3">
         <div class="card-body ">
-          <h4 class="card-title border rounded-pill border-danger border-3 p-2">Socialite 
+          <h4 class="card-title border rounded-pill border-danger border-3 p-2">Socialite : a social media app
           </h4>
-          <label class="text-secondary border border-1 my-2 p-1  border-success p-1 ">react.js,bootstrap ,rapid api
+          <label class="text-secondary border border-1 my-2 p-1  border-success p-1 ">React.js , tailwind css , firebase
           </label>
-          <p class="card-text">
+          <p class="card-text">Socilaite: Share your world! Post, like, comment, and reply on a lightning-fast social media app built with React, Firebase, and Tailwind CSS. Follow friends, explore feeds, and express yourself –
           </p>
-          <a class="btn btn-primary" href="https://github.com/Ashutosh137/unleashed-fitness-">code</a>
-          <a class="btn btn-danger" href="https://unleashed-fitness-git-master-ashutosh137.vercel.app/">deployed link</a>
+          <a class="btn btn-primary" target="_blank"
+            href="https://github.com/Ashutosh137/Socialite-React-firebase-social-media-app">code</a>
+          <a class="btn btn-danger" target="_blank" href="https://socialite-ashutosh.vercel.app">view</a>
         </div>
       </li>
-      
-       <li class="card shadow m-auto my-2 py-3">
+      <li class="card shadow m-auto my-2 py-3">
+        <div class="card-body ">
+          <h4 class="card-title border rounded-pill border-danger border-3 p-2">quotoverse
+          </h4>
+          <label class="text-secondary border border-1 my-2 p-1  border-success p-1 ">next.js , material ui , monogdb
+          </label>
+          <p class="card-text">Dive into Quoteverse, a Next.js app where quotes come alive! Explore a world of wisdom,
+            search by category, and leave your mark with comments and likes.
+          </p>
+          <a class="btn btn-primary" target="_blank" href="https://github.com/Ashutosh137/quotoverse">code</a>
+          <a class="btn btn-danger" target="_blank" href="https://quotoverse.vercel.app/">view</a>
+        </div>
+      </li>
+
+      <li class="card shadow m-auto my-2 py-3">
         <div class="card-body ">
           <h4 class="card-title border rounded-pill border-danger border-3 p-2">Unleashed Fitness : An exercise webapp
           </h4>
@@ -216,11 +231,11 @@
             detailed filters, and video/gif demonstrations for home and gym. Save your favorites locally for long-term
             access."
           </p>
-          <a class="btn btn-primary" href="https://github.com/Ashutosh137/unleashed-fitness-">code</a>
-          <a class="btn btn-danger" href="https://unleashed-fitness-git-master-ashutosh137.vercel.app/">deployed link</a>
+          <a class="btn btn-primary" target="_blank" href="https://github.com/Ashutosh137/unleashed-fitness-">code</a>
+          <a class="btn btn-danger" target="_blank" href="https://unleashed-fitness.vercel.app/">view</a>
         </div>
       </li>
-      
+
       <li class="shadow card m-auto my-2 py-3">
         <div class="card-body">
           <h4 class="card-title border rounded-pill border-danger border-3 p-2">Mirrormed hospital website</h4>
@@ -228,9 +243,9 @@
           <p class="card-text">"Mirrormed: React-powered hospital webapp; departments, gallery, appointments, and
             contact integration."
           </p>
-          <a class="btn btn-primary" href="https://github.com/Ashutosh137/Hospital">code</a>
-          <a class="btn btn-danger"
-            href="https://hospital-qjq697f27-ashutosh137.vercel.app">deployed link</a>
+          <a class="btn btn-primary" target="_blank"
+            href="https://github.com/Ashutosh137/React-hospital-overview">code</a>
+          <a class="btn btn-danger" target="_blank" href="https://mirrormed-hospital.vercel.app/">view</a>
         </div>
 
       </li>
@@ -242,14 +257,14 @@
           <p class="card-text">
             "TalkForge: AI chatbot clone with OpenAI GPT-3.5 Turbo. Two characters – teacher for direct answers, and
             friend for interactive conversations."</p>
-          <a class="btn btn-primary" href="https://github.com/Ashutosh137/chatgpt">code</a>
-          <a class="btn btn-danger"  href="https://chatbot-one-blush-47.vercel.app/">deployed link</a>
+          <a class="btn btn-primary" target="_blank" href="https://github.com/Ashutosh137/React-Ai-Chatbot">code</a>
+          <a class="btn btn-danger" target="_blank" href="https://talkflow-chatgpt.vercel.app/">view</a>
         </div>
 
 
       </li>
 
-     
+
 
       <li class="card shadow m-auto my-2 py-3">
         <div class="card-body ">
@@ -259,8 +274,8 @@
           </label>
           <p class="card-text">TranslateHub: A language translator website with text-to-text translation across multiple
             languages."</p>
-          <a class="btn btn-primary" href="https://github.com/Ashutosh137/language-translator">code</a>
-          <a class="btn btn-danger" href=" https://ashutosh137.github.io/language-translator/">deployed link</a>
+          <a class="btn btn-primary" target="_blank" href="https://github.com/Ashutosh137/language-translator">code</a>
+          <a class="btn btn-danger" target="_blank" href=" https://ashutosh137.github.io/language-translator/">view</a>
 
 
         </div>
@@ -272,7 +287,7 @@
             python</h4>
           <label class="text-secondary border border-1 my-2 p-1  border-success p-1">python,tkinter module </label>
           <p class="card-text">Python GUI with Tkinter: Todo List, Calculator, and Notepad applications</p>
-          <a class="btn btn-primary"
+          <a class="btn btn-primary" target="_blank"
             href="https://github.com/Ashutosh137/GUI-interface-using-python-thinker-module">code</a>
 
       </li>
@@ -286,19 +301,19 @@
       <a class="m-auto p-2 text-white border-bottom text-decoration-none" href="tel:7877997488">+91-7877997488</a>
       <a class="m-auto p-2 text-white border-bottom text-decoration-none "
         href="mailto:mr.luckysharma7@gmail.com">mr.luckysharma7@gmail.com</a>
-      <a class="m-auto p-2 text-white border-bottom text-decoration-none "
+      <a class="m-auto p-2 text-white border-bottom text-decoration-none " target="_blank"
         href="https://github.com/Ashutosh137/">github</a>
-      <a class="m-auto p-2 border-bottom text-white text-decoration-none "
+      <a class="m-auto p-2 border-bottom text-white text-decoration-none " target="_blank"
         href="https://www.linkedin.com/in/ashutosh-sharma-5b99b0226">linkdin</a>
-      <a class="m-auto p-2 text-white border-bottom text-decoration-none "
+      <a class="m-auto p-2 text-white border-bottom text-decoration-none " target="_blank"
         href="https://instagram.com/ashutosh_sharma1237?igshid=ZDdkNTZiNTM=">instragram</a>
-      <a class="m-auto p-2 text-white border-bottom  text-decoration-none "
+      <a class="m-auto p-2 text-white border-bottom  text-decoration-none " target="_blank"
         href="https://www.facebook.com/profile.php?id=100007558149967&mibextid=ZbWKwL">facebook</a>
-      <a class="m-auto p-2 text-white border-bottom text-decoration-none "
+      <a class="m-auto p-2 text-white border-bottom text-decoration-none " target="_blank"
         href="https://www.codechef.com/users/ashu_77">codechef</a>
-      <a class="m-auto p-2 text-white border-bottom text-decoration-none"
+      <a class="m-auto p-2 text-white border-bottom text-decoration-none" target="_blank"
         href="https://www.hackerrank.com/mrluckysharma7">hackerrank</a>
-      <a class="m-auto p-2 text-white border-bottom text-decoration-none "
+      <a class="m-auto p-2 text-white border-bottom text-decoration-none " target="_blank"
         href="https://leetcode.com/mrluckysharma7/">leetcode</a>
     </div>
     <div class="text-center  p-2">Copyright © 2023 All rights reserved || This template is made by ashutosh sharma
