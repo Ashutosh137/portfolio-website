@@ -1,113 +1,288 @@
+import { PinContainer } from "@/components/ui/3d-pin";
+import { Meteors, WobbleCard } from "@/components/ui/card";
+import Card_list, {
+  Card,
+  CardDescription,
+  CardTitle,
+  Card_button,
+  HoverEffect,
+} from "@/components/ui/card-hover";
+import IconCloud from "@/components/ui/cloud-icon-theme";
+import { CoolMode } from "@/components/ui/cool-mode";
+import { FlipWords } from "@/components/ui/fip-words";
+import { GlareCard } from "@/components/ui/glard-card";
+import { GlowingStarsBackgroundCard } from "@/components/ui/glow-star";
+import { HeroParallax, ProductCard } from "@/components/ui/hero-parallex";
+import { LinkPreview } from "@/components/ui/link-preview";
+import Navbar from "@/components/ui/navbar";
+import TextRevealByWord from "@/components/ui/revel";
+import { ContainerScroll } from "@/components/ui/scroll";
+import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
+import image1 from "@/public/html.f3aa7827cd5160f3fc1c.png";
+import image2 from "@/public/screenshot2.png";
+import image3 from "@/public/screenshot3.png";
+import image4 from "@/public/screenshot4.png";
 import Image from "next/image";
-
 export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+  interface Project {
+    title: string;
+    description: string;
+    image: string;
+    live_link: string;
+    github: string;
+    tech: string[];
+  }
 
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+  interface SkillIcon {
+    thumbnail: any;
+    title: string;
+  }
+  interface Home {
+    thumbnail: any;
+    title: string;
+    link: string;
+  }
+  const dashboard: Home[] = [
+    {
+      title: "sfs",
+      link: "sfkgf",
+      thumbnail: image1,
+    },
+    {
+      title: "sfs",
+      link: "sfkgf",
+      thumbnail: image2,
+    },
+    {
+      title: "sfs",
+      link: "sfkgf",
+      thumbnail: image3,
+    },
+    {
+      title: "sfs",
+      link: "sfkgf",
+      thumbnail: image4,
+    },
+    {
+      title: "sfs",
+      link: "sfkgf",
+      thumbnail: image1,
+    },
+    {
+      title: "sfs",
+      link: "sfkgf",
+      thumbnail: image4,
+    },
+  ];
+
+  const main_project: Project[][] = [
+    {
+      title: "socialite : ",
+      description:
+        "Spearheaded the development of Socialite from inception to completion, employing React.js, Tailwind CSS, and Firebase. This initiative yielded a notable 50% surge in user engagement and a 30% reduction in page loading times. ",
+      live_link: "https://socialite-ashutosh.vercel.app/",
+      tech: [
+        "react js ",
+        "firebassndlknnde",
+        "react js ",
+        "firebase",
+        "react js ",
+      ],
+    },
+    {
+      title: "quotoverse",
+      description:
+        "Spearheaded the development of Socialite from inception to completion, employing React.js, Tailwind CSS, and Firebase. This initiative yielded a notable 50% surge in user engagement and a 30% reduction in page loading times. ",
+      live_link: "ndknfs",
+      tech: ["srting"],
+    },
+    {
+      title: "unleashed fitness",
+      description:
+        "Spearheaded the development of Socialite from inception to completion, employing React.js, Tailwind CSS, and Firebase. This initiative yielded a notable 50% surge in user engagement and a 30% reduction in page loading times. ",
+      live_link: "ndknfs",
+      tech: ["srting"],
+    },
+  ];
+
+  const other_projects: Project[][] = [
+    {
+      title: "A simple website",
+      description: "A simple website made with nextjs and tailwindcss",
+      link: "https://github.com/ahmed-ahmed-ahmed/simple-website",
+      tech: ["string"],
+    },
+  ];
+
+  const skills_icons: SkillIcon[][] = [
+    {
+      thumbnail: image1,
+      title: "html",
+    },
+  ];
+  return (
+    <div className="flex flex-col justify-center ">
+      <Navbar />
+      <HeroParallax products={dashboard} />
+      <div className="flex relative ">
+        <TextRevealByWord
+          className="ml-auto"
+          text="I'm passionate about crafting digital solutions. As a dedicated web developer, I thrive on creating impactful and user-centric online experiences. I'm deeply engaged in the process of building innovative and accessible solutions. Currently, I'm honing my skills and contributing to the world of technology."
         />
       </div>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <div className="max-w-screen-xl m-auto capitalize  ">
+        <h2 className="text-3xl mt-16 text-pretty text-sky-100 font-extrabold font-sans ml-10 ">
+          some things that i've build
+        </h2>
+        <HoverEffect className="mx-4" items={main_project} />
       </div>
-    </main>
+      <div className="max-w-screen-xl mx-auto">
+        <h2 className="text-3xl mt-16 text-pretty capitalize  font-extrabold font-sans  ">
+          <FlipWords
+            className="text-sky-100"
+            words={["skills", "exerpities"]}
+          />
+        </h2>
+        <div className="sm:flex block my-5 justify-between align-middle space-x-5 w-full space-y-5 ">
+          <div className=" h-full  mx-auto  w-full ">
+            <IconCloud
+              iconSlugs={[
+                "javascript",
+                "typescript",
+                "visualstudiocode",
+                "amazonaws",
+                "angular",
+                "github",
+                "git",
+                "react",
+                "html",
+                "html5",
+                "linkdin",
+                "mongodb",
+                "html5",
+                "chatbot",
+                "chartdotjs",
+                "socketdotio",
+                "sqlite",
+                "svg",
+                "tailwindcss",
+                "mongodb",
+                "nestjs",
+                "nextdotjs",
+                "nodedotjs",
+                "normalizedotcss",
+                "npm",
+                "numpy",
+                "nuxtdotjs",
+                "nvm",
+                "openai",
+                "p5dotjs",
+                "d3.js",
+                "redox",
+                "reddit",
+                "redwoodjs",
+                "reactbootstrap",
+                "reacthookform",
+                "reactquery",
+                "reactrouter",
+                "mambaui",
+                "underscoredotjs",
+                "webrtc",
+                "web3dotjs",
+                "youtube",
+                "reduxsaga",
+                "ruby",
+                "scipy",
+                "threedotjs",
+                "json",
+                "jsonwebtokens",
+                "mysql",
+                "postgresssql",
+                "css",
+                "figma",
+                "nextjs",
+                "coder",
+                "graphql",
+                "rest",
+                "firebase",
+                "django",
+                "flask",
+                "vercel",
+                "python",
+                "rust",
+                "docker",
+                "aws",
+              ]}
+            />
+          </div>
+          <div className="grid w-full grid-cols-2 sm:grid-cols-6 auto-rows-[5rem]  gap-5  mx-2 sm:mx-auto max-w-screen-xl">
+            {skills_icons.map((skill, index) => {
+              return (
+                <ProductCard
+                  className="w-[5rem] mx-auto"
+                  key={index}
+                  product={skill}
+                />
+              );
+            })}
+          </div>
+        </div>
+      </div>
+      <div className="max-w-screen-xl mx-auto">
+        <h2 className="text-3xl mt-16 text-pretty capitalize  font-extrabold font-sans  ">
+          <FlipWords
+            className="text-sky-100"
+            words={["other products", "previoes"]}
+          />
+        </h2>
+        <div className="sm:flex block my-5 justify-between align-middle space-x-5 w-full space-y-5 ">
+          <div className="grid w-full grid-cols-1 sm:grid-cols-3   gap-5  mx-2 sm:mx-auto max-w-screen-xl">
+            {other_projects.map((item, index) => {
+              return (
+                <WobbleCard key={index} className="bg-zinc-900 m-1">
+                  <Card className="mx-auto ">
+                    <Meteors />
+                    <CardTitle className="text-2xl pb-2 capitalize text-center">
+                      {item.title}
+                    </CardTitle>
+                    <ul className="flex space-x-2 capitalize flex-wrap w-full my-2 justify-center">
+                      {item.tech.map((tech, ind) => {
+                        return (
+                          <Card_list key={ind} className="capitalize">
+                            {tech}
+                          </Card_list>
+                        );
+                      })}
+                    </ul>
+                    <CardDescription className="">
+                      {item.description}
+                    </CardDescription>
+
+                    <div className=" mt-8 flex justify-center space-x-6">
+                      <Card_button link={item.github_link}>github</Card_button>
+                      <Card_button link={item.live_link}>link</Card_button>
+                    </div>
+                  </Card>
+                </WobbleCard>
+              );
+            })}
+            jvjh hvh vh yfyflorem Lorem, ipsum dolor sit amet consectetur
+            adipisicing elit. Corporis magnam blanditiis minus magni odio
+            laborum fugiat? Soluta repellat blanditiis cumque suscipit nihil!
+            Ducimus libero deleniti molestiae aut labore similique nostrum.
+          </div>
+        </div>
+      </div>
+
+      <ContainerScroll>
+        <LinkPreview className="text-white" url="">
+          kwfwek knlndclsnclknafs
+        </LinkPreview>
+      </ContainerScroll>
+      {/* <PinContainer title="ashut" href="dfsj">
+      <TextGenerateEffect words="loremcndsjds fkjbk cdsbjkkjdfjsjfkjkcfkjbfkjdbfkjgeu xbff" />
+    </PinContainer> */}
+    </div>
   );
 }
